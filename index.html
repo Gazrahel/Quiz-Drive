@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Examen de Conducción</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <h1>Quiz Conducción Chile</h1>
+    <div id="streak-badge" class="badge">Racha: 0</div>
+  </header>
+
+  <main id="app" class="app-container">
+    <!-- Question card will be injected by app.js -->
+  </main>
+
+  <section id="analytics" class="analytics-panel hidden">
+    <h2>Estadísticas</h2>
+    <div class="stats-grid">
+      <div>Total respondidas: <span id="total-answered">0</span></div>
+      <div>Aciertos: <span id="total-correct">0</span></div>
+      <div>Errores: <span id="total-wrong">0</span></div>
+      <div>Racha máxima: <span id="max-streak">0</span></div>
+    </div>
+    <canvas id="topicChart" width="400" height="200"></canvas>
+    <button id="reset-btn" class="reset-btn">Reiniciar progreso</button>
+  </section>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
